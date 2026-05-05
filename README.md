@@ -76,7 +76,7 @@ Outputs land in `figures/` (PDF + PNG); npz solves cache in `data/`.
 appendices/
 ├── appendix_B_window_control.py    # tab:window_control (per-ell vs common grid)
 ├── appendix_C_gradient_descriptors.py  # tab:gradient_descriptors_exact (D1/D2/D3 across 19 systems)
-└── appendix_D_sigma_k_robustness.py    # rho(k) sweep over k in {3,5,7,10,15,20}
+└── appendix_D_sigma_k_robustness.py    # not included in dissertation, but performs a k parameter sweep, holds between k=3 and k=18
 ```
 
 Each script reads from `../section4/data/`, so the section 4 solves must
