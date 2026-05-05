@@ -69,3 +69,27 @@ python fig_*.py                     # any order
 ```
 
 Outputs land in `figures/` (PDF + PNG); npz solves cache in `data/`.
+
+## Appendices
+
+```
+appendices/
+├── appendix_B_window_control.py    # tab:window_control (per-ell vs common grid)
+├── appendix_C_gradient_descriptors.py  # tab:gradient_descriptors_exact (D1/D2/D3 across 19 systems)
+└── appendix_D_sigma_k_robustness.py    # rho(k) sweep over k in {3,5,7,10,15,20}
+```
+
+Each script reads from `../section4/data/`, so the section 4 solves must
+have finished before the appendices can run. Outputs land in
+`appendices/results/`.
+
+Run order (from inside `appendices/`):
+
+```
+python appendix_B_window_control.py     # ~3 min
+python appendix_C_gradient_descriptors.py  # ~10 min (4 descriptors × 19 systems)
+python appendix_D_sigma_k_robustness.py    # ~7 min  (KRR once per system + KNN sweep)
+```
+
+Appendix A in the dissertation is `fig_5_sigma_spatial.pdf`, generated
+by `section4/fig_5_sigma_spatial.py`.
